@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:contactsflutter/form.dart';
-import 'package:contactsflutter/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -12,39 +11,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Contatos',
       color: Colors.white,
-      home: SplashScreen(),
-      theme: ThemeData(
-        fontFamily: 'Roboto-Thin'
-      )      ,
+      home: MyHomePage(),
+      theme: ThemeData(fontFamily: 'Roboto-Thin'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: <Widget>[],
+        elevation: 0,
         centerTitle: true,
-        title: Text(widget.title,
-         style: TextStyle(color: Colors.black54, ),),
+        title: Text(
+          'Contatos',
+          style: TextStyle(
+            color: Colors.black54,
+          ),
+        ),
         backgroundColor: Colors.white,
-
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Exemplo de layout add contatos do Google',
+              'Exemplo de layout contatos do Android',
             ),
           ],
         ),

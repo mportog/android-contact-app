@@ -79,9 +79,11 @@ class _FormContactState extends State<FormContact> {
 
   Future<bool> _onWillPop() {
     AlertDialog alerta = AlertDialog(
-      content: 
-          Text("Alterações não foram salvas.",style: TextStyle(color: Colors.black54),),
-            shape: RoundedRectangleBorder(
+      content: Text(
+        "Alterações não foram salvas.",
+        style: TextStyle(color: Colors.black54),
+      ),
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(10.0),
         ),
@@ -90,13 +92,13 @@ class _FormContactState extends State<FormContact> {
         FlatButton(
           child: Text("Descartar"),
           onPressed: () {
-              Navigator.of(context).pop();
+            Navigator.of(context).pop();
           },
         ),
         FlatButton(
           child: Text("Salvar"),
           onPressed: () {
-             Navigator.of(context).pop();
+            Navigator.of(context).pop();
           },
         )
       ],
@@ -114,7 +116,9 @@ class _FormContactState extends State<FormContact> {
       actions: <Widget>[
         FlatButton(
           textColor: Colors.white,
-          onPressed: () { Navigator.of(context).pop(true);},
+          onPressed: () {
+            Navigator.of(context).pop(true);
+          },
           child: Text(
             "Salvar",
             style: TextStyle(
@@ -157,16 +161,6 @@ class _FormContactState extends State<FormContact> {
         children: <Widget>[
           Text("Tirar foto"),
           Text("\nEscolher foto"),
-          // SimpleDialog(
-          //   children: <Widget>[
-          //     Text("Tirar foto"),
-          //   ],
-          // ),
-          // SimpleDialog(
-          //   children: <Widget>[
-          //     Text("Escolher foto"),
-          //   ],
-          // ),
         ],
       ),
       shape: RoundedRectangleBorder(
@@ -190,7 +184,6 @@ class _FormContactState extends State<FormContact> {
     return Column(
       children: <Widget>[
         _textFieldIconOptionsBuilder('Nome', Icons.person_outline),
-        // _textFieldPrefixSufixBuilder('Nome', Icons.person_outline),
         _textFieldBuilder('Sobrenome'),
       ],
     );
@@ -199,7 +192,6 @@ class _FormContactState extends State<FormContact> {
   Widget openedForm() {
     return Column(children: <Widget>[
       _textFieldIconOptionsBuilder('Prefixo do nome', Icons.person_outline),
-      // _textFieldPrefixSufixBuilder('Prefixo do nome', Icons.person_outline),
       _textFieldBuilder('Nome'),
       _textFieldBuilder('Nome do meio'),
       _textFieldBuilder('Sobrenome'),
